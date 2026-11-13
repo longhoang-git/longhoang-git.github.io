@@ -3,6 +3,8 @@
 Static personal website (no build step), deployed to GitHub Pages by
 `.github/workflows/static.yml` on every push to `main`.
 
+Live at **<https://longhoang-git.github.io/>** (repository `longhoang-git/longhoang-git.github.io`).
+
 ```
 .
 ├── index.html                      ← the site (placeholder for now)
@@ -26,6 +28,5 @@ Open `index.html` in a browser.
 ## Deployment
 
 Enable Pages once: **Settings → Pages → Build and deployment → Source: GitHub
-Actions**. If the repository is named `<username>.github.io`, the site is
-served at `https://<username>.github.io/`; any other name serves it at
-`https://<username>.github.io/<repo-name>/`.
+Actions**. The repository must stay named `longhoang-git.github.io` for the
+site to be served at `https://longhoang-git.github.io/`.
