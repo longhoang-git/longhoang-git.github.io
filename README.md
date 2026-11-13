@@ -13,7 +13,7 @@ Live at **<https://longhoang-git.github.io/>** (repository `longhoang-git/longho
 ├── site.js         ← all behaviour, read from the markup in index.html
 ├── assets/
 │   ├── CV_Long_Hoang.pdf           ← (to come) public CV — no phone, no referees
-│   ├── portrait.jpg                ← (optional, to come) replaces the initials tile
+│   ├── portrait.jpg                ← profile photo, 4:5
 │   └── logos/                      ← (empty for now)
 ├── .nojekyll                       ← tells Pages to serve files as they are
 └── .github/workflows/static.yml    ← deploys to GitHub Pages on push to main
@@ -68,7 +68,9 @@ Projects panel:
 ```
 
 `data-topics` is space-separated; each word matches a filter chip's
-`data-topic` (`leadership`, `cables`, `studies`, `econ`, `software`). To add
+`data-topic`. Sector chips: `selected` (on the CV), `offshore`, `onshore`,
+`solar`, `interconnector`, `hydrogen`. Work chips: `leadership`, `cables`,
+`studies`, `econ`, `markets`, `policy`, `software`. To add
 a topic, add a chip:
 `<button class="chip" type="button" data-topic="hvdc" aria-pressed="false">HVDC</button>`.
 Counts on the chips are filled in automatically.
@@ -108,14 +110,19 @@ is the bar's label.
 the top bar and a matching `<section id="panel-name" data-panel="name">` in
 `<main>`. The switching script picks it up automatically.
 
+**After changing styles.css or site.js.** Change the `?v=…` date on the two
+links in `index.html` (`styles.css?v=2026-11-13`, `site.js?v=2026-11-13`) to
+today's date, so visitors' browsers load the new file instead of a cached copy.
+
 **Update the CV.** Put the public CV at `assets/CV_Long_Hoang.pdf`, keeping the
 filename, and update the "Last updated" line in the CV panel. Once the file
 exists, uncomment the `<iframe class="pdf-frame">` there to show it in the page.
 
-**Add a photo.** Put it at `assets/portrait.jpg` and replace the initials tile
-(`<div class="portrait initials">`) with the `<img>` given in the comment above
-it. It is cropped to 4:5, so a tall portrait works best; adjust
-`object-position` in `styles.css` to shift the crop.
+**Change the photo.** The portrait is `assets/portrait.jpg` (4:5, 760 × 950 px,
+JPG). To change it: crop the new photo to 4:5 (portrait), save it as JPG,
+replace `assets/portrait.jpg` with the same name, then commit and push. The page
+also crops to 4:5, so a slightly different ratio still works; adjust
+`object-position` on `.portrait` in `styles.css` to shift the crop.
 
 **Change the accent colour.** `--accent` at the top of `styles.css` (navy
 `#003366`, as on the CV), and its dark-theme counterpart under

@@ -78,8 +78,8 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   padding: 48px 40px 0;
   display: grid;
-  grid-template-columns: 252px 1fr;
-  gap: 76px;
+  grid-template-columns: 290px 1fr;
+  gap: 64px;
   align-items: start;
 }
 
@@ -89,7 +89,7 @@ a { color: inherit; text-decoration: none; }
 
 .portrait {
   width: 100%;
-  max-width: 252px;
+  max-width: 290px;
   aspect-ratio: 4 / 5;
   height: auto;
   object-fit: cover;
@@ -573,6 +573,8 @@ kbd {
 /* ---------- sidebar extras ---------- */
 
 .links .email { display: flex; align-items: center; gap: 6px; }
+/* Keep the address on one line; never break it between letters. */
+.links .email a { white-space: nowrap; overflow-wrap: normal; }
 .copy {
   display: inline-flex;
   padding: 3px;
@@ -596,7 +598,9 @@ kbd {
   gap: 12px;
   margin-bottom: 10px;
 }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-groups { display: flex; flex-direction: column; gap: 8px; }
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.chips-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); min-width: 56px; }
 .chip {
   display: inline-flex;
   align-items: center;
