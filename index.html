@@ -1,25 +1,412 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Long Hoang</title>
-  <meta name="description" content="Long Hoang — Electrical Engineer, power systems and offshore wind.">
-  <style>
-    :root { color-scheme: light dark; --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a66; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#151515; --fg:#ecebe7; --muted:#9a9993; } }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:16px;
-           background:var(--bg); color:var(--fg);
-           font:16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-    h1 { margin:0 0 .25rem; font-size:2rem; }
-    p  { margin:0; color:var(--muted); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long Hoang</title>
+<meta name="description" content="Long Hoang (Hoang Hieu Long) — Electrical Engineer · MSc Power Systems Engineering, UCL. Five years of experience across power-system research and renewable energy consultancy, specialising in HV cable systems, substation concepts and power-system studies.">
+<meta name="author" content="Long Hoang">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Long Hoang — Electrical Engineer">
+<meta property="og:description" content="Electrical engineer with five years of experience across power-system research and renewable energy consultancy · MSc Power Systems Engineering, UCL.">
+
+<!-- Apply a saved dark theme before the first paint, so the page does not flash white. -->
+<script>try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23003366'/><text x='50' y='70' font-size='58' text-anchor='middle' fill='white' font-family='Georgia,serif'>L</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <main>
+
+<!-- ================= TOP BAR ================= -->
+<nav class="topbar" aria-label="Sections">
+  <div class="topbar-inner">
+    <a class="brand" href="#about" data-nav="about">Long Hoang</a>
+    <ul>
+      <li><a href="#about"      data-nav="about">About</a></li>
+      <li><a href="#experience" data-nav="experience">Experience</a></li>
+      <li><a href="#projects"   data-nav="projects">Projects</a></li>
+      <li><a href="#research"   data-nav="research">Research</a></li>
+      <li><a href="#cv"         data-nav="cv">CV</a></li>
+    </ul>
+    <div class="tools">
+      <button class="tool" type="button" data-action="palette" aria-label="Search the site" title="Search the site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <kbd class="shortcut">Ctrl K</kbd>
+      </button>
+      <button class="tool theme-btn" type="button" data-action="theme" aria-label="Dark mode" title="Dark mode" aria-pressed="false">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <!-- Initials tile, standing in for a photo. To use a photo instead, put it at
+         assets/portrait.jpg and replace this <div> with:
+         <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Long Hoang" width="252" height="315">
+         Both are 4:5, so the layout does not move. -->
+    <div class="portrait initials" role="img" aria-label="Long Hoang"><span aria-hidden="true">LH</span></div>
+
     <h1>Long Hoang</h1>
-    <p>Electrical Engineer · MSc Power Systems Engineering, UCL</p>
-    <p>Website under construction.</p>
+    <div class="also-known">Hoang Hieu Long</div>
+
+    <p class="role">
+      <strong>Electrical Engineer</strong><br>
+      MSc Power Systems Engineering, UCL<br>
+      London, UK
+    </p>
+
+    <ul class="links">
+      <li class="email">
+        <a href="mailto:hoanghieulong200359@gmail.com">hoanghieulong200359@gmail.com</a>
+        <button class="copy" type="button" data-action="copy-email" aria-label="Copy email address" title="Copy email address">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+      </li>
+      <li><a href="assets/CV_Long_Hoang.pdf" target="_blank" rel="noopener" data-link="cv">Curriculum Vitae (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/long-hoang-hieu-225a44256/" target="_blank" rel="noopener" data-link="linkedin">LinkedIn</a></li>
+    </ul>
+  </aside>
+
+  <!-- ================= PANELS ================= -->
+  <main>
+
+    <!-- ---------- About ---------- -->
+    <section id="panel-about" data-panel="about">
+      <h2>About</h2>
+      <div class="prose">
+        <!-- Short biography: word for word from cv/master-content.md (consultancy / EPC version). -->
+        <p class="lead">
+          I am an electrical engineer with five years of experience across renewable energy
+          consultancy and power-system research, specialising in HV cable systems, substation
+          concepts and power-system studies.
+        </p>
+        <p>
+          At OWC – an Aqualis Company, I have delivered electrical design for 20+ offshore wind,
+          solar PV, BESS and interconnector projects from 50 MW to 2 GW, led three electrical work
+          packages, one rated 9/10 by the client, and developed an inter-array cable layout
+          optimiser that shortens cable length by 10–30%. Alongside my MSc in Power Systems
+          Engineering at
+          <a href="https://www.ucl.ac.uk/study/prospective-students/graduate/courses/power-systems-engineering-msc" target="_blank" rel="noopener">UCL</a>,
+          I continue to advise OWC on HV and LV design, technical due diligence and power-system studies.
+        </p>
+      </div>
+
+      <ul class="tags">
+        <li>Offshore wind</li>
+        <li>Solar PV</li>
+        <li>BESS</li>
+        <li>HVAC interconnectors</li>
+        <!-- A tag with data-sub opens Projects filtered to that topic. -->
+        <li><a href="#projects/cables" data-nav="projects" data-sub="cables" title="See cable-system projects">Cable systems →</a></li>
+        <li><a href="#projects/studies" data-nav="projects" data-sub="studies" title="See power-system studies">Power-system studies →</a></li>
+        <li><a href="#projects/software" data-nav="projects" data-sub="software" title="See software projects">Software →</a></li>
+      </ul>
+
+      <h3 class="subhead">Skills and tools</h3>
+      <ul class="facts">
+        <li><span class="k">Power-system analysis</span><span class="v">Reactive power and loss studies, microgrid control <span class="sub">DIgSILENT PowerFactory, MATLAB/Simulink</span></span></li>
+        <li><span class="k">Electrical design</span><span class="v">Cable systems, substation concepts, BESS sizing <span class="sub">QGIS, AutoCAD, Visio</span></span></li>
+        <li><span class="k">Techno-economics</span><span class="v">CAPEX, NPV option studies, due diligence <span class="sub">Excel/VBA cost models</span></span></li>
+        <li><span class="k">Programming</span><span class="v">Optimisation and automation <span class="sub">Python, VBA, MATLAB, LaTeX</span></span></li>
+        <li><span class="k">Languages</span><span class="v">English (IELTS 7.0), Vietnamese (native)</span></li>
+      </ul>
+
+      <h3 class="subhead">Education</h3>
+      <ul class="facts">
+        <li><span class="k">2026 — 2027</span><span class="v">MSc Power Systems Engineering, <a href="https://www.ucl.ac.uk/study/prospective-students/graduate/courses/power-systems-engineering-msc" target="_blank" rel="noopener">University College London (UCL)</a>, UK</span></li>
+        <li><span class="k">2020 — 2025</span><span class="v">BSc Electrical Engineering, <a href="https://seee.hust.edu.vn/" target="_blank" rel="noopener">Hanoi University of Science and Technology (HUST)</a>, Vietnam <span class="sub">Top 10% of the cohort; graduation thesis 10/10, ranked 1st of 200+ students.</span></span></li>
+        <li><span class="k">Apr — Nov 2023</span><span class="v">Research exchange, Electromagnetic Actuator Laboratory, <a href="https://www.shibaura-it.ac.jp/en/" target="_blank" rel="noopener">Shibaura Institute of Technology (SIT)</a>, Japan</span></li>
+      </ul>
+
+      <h3 class="subhead">Honours and awards</h3>
+      <ul class="facts">
+        <li><span class="k">2024</span><span class="v">OWC Scholarship — top 5 of 200 students in the School</span></li>
+        <li><span class="k">2022</span><span class="v">Third Prize, Student Forum — top 30 of 1,000+ student research papers in Vietnam</span></li>
+        <li><span class="k">Olympiad</span><span class="v">Third Prize, Vietnam Mathematical Olympiad — top 45 of 2,000+ in the national round</span></li>
+      </ul>
+
+      <h3 class="subhead">Contact</h3>
+      <ul class="facts">
+        <li><span class="k">Email</span><span class="v"><a href="mailto:hoanghieulong200359@gmail.com">hoanghieulong200359@gmail.com</a></span></li>
+        <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/long-hoang-hieu-225a44256/" target="_blank" rel="noopener">linkedin.com/in/long-hoang-hieu-225a44256</a></span></li>
+        <li><span class="k">Location</span><span class="v">London, UK</span></li>
+      </ul>
+    </section>
+
+    <!-- ---------- Experience ----------
+         One timeline, newest first. Each .entry carries:
+           data-kind  — industry | research (colours the label and the bar)
+           data-from  — start year;  data-to — end year or "present"
+           data-short — the row label in the span chart at the top
+         The span chart is drawn from these by site.js. -->
+    <section id="panel-experience" data-panel="experience">
+      <h2>Experience</h2>
+      <p class="lead">Five years of experience across power-system research and renewable energy consultancy.</p>
+
+      <div class="span-chart" aria-label="Timeline of roles"></div>
+
+      <div class="timeline">
+        <div class="entry" data-kind="industry" data-from="2026" data-to="present" data-short="Consultant · OWC">
+          <div class="when"><span class="date">2026 — Present</span><span class="kind industry">Industry</span></div>
+          <div>
+            <div class="what">Consultant – Electrical Engineer</div>
+            <div class="where">OWC – an Aqualis Company · remote</div>
+            <ul class="detail">
+              <li>Provide HV and LV analysis and advice on renewable energy projects in owner's engineer, technical due diligence and power-system study roles; maintain the team's analytical tools.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry" data-kind="research" data-from="2026" data-to="2026" data-short="Book chapter · ACE">
+          <div class="when"><span class="date">2026</span><span class="kind research">Research</span></div>
+          <div>
+            <div class="what">First Author, Book Chapter (accepted, in preparation)</div>
+            <div class="where">ASEAN Centre for Energy</div>
+            <ul class="detail">
+              <li>Developing a project risk framework and an offshore wind financial model that test how grid-connection delay, curtailment, offtake price and financing affect NPV, required tariff and debt-service capacity in Viet Nam and the Philippines.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry" data-kind="industry" data-from="2024" data-to="2026" data-short="Electrical Engineer · OWC">
+          <div class="when"><span class="date">2024 — 2026</span><span class="kind industry">Industry</span></div>
+          <div>
+            <div class="what">Electrical Engineer</div>
+            <div class="where">OWC – an Aqualis Company, Vietnam</div>
+            <ul class="detail">
+              <li><b>Scope:</b> designed and supported 20+ utility-scale projects (50 MW to 2 GW) in offshore wind, solar PV, BESS and HVAC interconnectors across the UK, Europe, MENA, APAC and the US, from feasibility to FEED.</li>
+              <li><b>Cable systems and substations:</b> delivered electrical design for 33 kV PV and BESS systems, 66–132 kV inter-array systems and export cable systems up to 275 kV, plus concept design of 230–500 kV offshore and onshore substations.</li>
+              <li><b>Power-system studies:</b> modelled reactive power compensation and losses for HVAC submarine cables over 100 km in DIgSILENT PowerFactory, for interconnector and offshore wind projects.</li>
+              <li><b>Techno-economics:</b> delivered CAPEX estimates, NPV-based design optioneering, technical due diligence and route-to-market risk assessments.</li>
+              <li><b>Leadership:</b> led 3 electrical work packages, coordinating 5+ multidisciplinary team members.</li>
+              <li><b>Engineering tools:</b> built 3 internal tools in Python, VBA and QGIS (IAC layout optimiser, microgrid failure assessment, Power-to-X emissions calculator), presented at WindEurope and used on 5+ live projects; quality-checked 5 in-house design tools used on 10+ projects a year.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry" data-kind="research" data-from="2022" data-to="2025" data-short="Hydrogen Team Leader · HUST">
+          <div class="when"><span class="date">2022 — 2025</span><span class="kind research">Research</span></div>
+          <div>
+            <div class="what">Hydrogen Team Leader</div>
+            <div class="where"><a href="https://www.100relab.com/" target="_blank" rel="noopener">100% Renewable Energy Laboratory</a>, HUST · supervisor: <a href="https://scholar.google.com/citations?user=89Jk4L0AAAAJ" target="_blank" rel="noopener">Assoc. Prof. Nguyen Duc Tuyen</a></div>
+            <ul class="detail">
+              <li>Led a five-member team that published 2 journal articles and 3 conference papers on microgrid optimisation, energy management and PV–electrolyser direct coupling; won USD 5,000 of Green In funding for a green city model with hydrogen storage.</li>
+              <li><b>Energy management:</b> developed MATLAB models of an AC microgrid with battery–hydrogen storage and grid-forming control, including a state-space model for model predictive control (MPC) benchmarked against fuzzy-logic and state-machine strategies.</li>
+              <li><b>Hydrogen systems:</b> reviewed sizing and operating strategies for direct-coupled PV–electrolyser systems; developed a Power-to-Hydrogen life-cycle assessment method.</li>
+              <li><b>Hydrogen policy:</b> authored 5 policy and market briefs that benchmarked national hydrogen strategies (US, Germany, Japan, China) on long-term targets, demand creation, investment de-risking and R&amp;D support, and set out policy options for Vietnam, including emissions trading, tax incentives and the cost case for hydrogen co-firing in gas plants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Projects ----------
+         Filters: each chip matches cards whose data-topics contains its data-topic.
+         Terminology: IAC = inter-array cable; OSS = offshore substation. -->
+    <section id="panel-projects" data-panel="projects">
+      <h2>Selected projects</h2>
+
+      <div class="filters">
+        <div class="chips" role="group" aria-label="Filter by topic">
+          <button class="chip" type="button" data-topic="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-topic="leadership" aria-pressed="false">Leadership</button>
+          <button class="chip" type="button" data-topic="cables" aria-pressed="false">Cable systems</button>
+          <button class="chip" type="button" data-topic="studies" aria-pressed="false">Power-system studies</button>
+          <button class="chip" type="button" data-topic="econ" aria-pressed="false">Techno-economics &amp; markets</button>
+          <button class="chip" type="button" data-topic="software" aria-pressed="false">Software</button>
+        </div>
+        <label class="filter-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" placeholder="Filter by keyword" aria-label="Filter projects by keyword">
+        </label>
+      </div>
+      <p class="filter-count" aria-live="polite"></p>
+      <p class="filter-empty" hidden>No project matches that filter.</p>
+
+      <div class="cards">
+        <article class="card" data-topics="leadership cables econ">
+          <div class="card-meta"><span class="status">FEED</span>Lead engineer, inter-array cable package</div>
+          <h3 class="card-title">1.32 GW offshore wind, Poland</h3>
+          <p class="card-text">Led the team delivering the inter-array cable (IAC) package and liaised with subcontractors and the client; set turbines per IAC string from electrical losses and the cable schedule, and compared IAC designs with and without an offshore substation on NPV. Client feedback 9/10.</p>
+        </article>
+
+        <article class="card" data-topics="leadership cables econ">
+          <div class="card-meta"><span class="status">Feasibility</span>Lead engineer, electrical work package</div>
+          <h3 class="card-title">500–1,000 MW offshore wind, Morocco</h3>
+          <p class="card-text">Led the electrical team and coordinated subcontractor and client inputs; designed IAC systems for four turbine-model and layout options at 66 kV and 132 kV, and compared them on electrical losses, cable schedule and NPV.</p>
+        </article>
+
+        <article class="card" data-topics="cables studies econ">
+          <div class="card-meta"><span class="status">Pre-FEED</span>Export system optioneering</div>
+          <h3 class="card-title">Up to 1,200 MW offshore wind, South Korea</h3>
+          <p class="card-text">Compared three export concepts for about 150 km of export cable on technical risk and cost-benefit: HVAC export via several offshore substations, HVAC export via a single offshore substation, and HVDC export.</p>
+        </article>
+
+        <article class="card" data-topics="cables studies">
+          <div class="card-meta"><span class="status">Interconnector</span>Main electrical designer</div>
+          <h3 class="card-title">400 MW Indonesia–Singapore HVAC interconnector</h3>
+          <p class="card-text">Designed the HVAC submarine cable system for the 100+ km route and modelled its reactive power compensation and transmission losses in DIgSILENT PowerFactory.</p>
+        </article>
+
+        <article class="card" data-topics="software cables leadership">
+          <div class="card-meta"><span class="status">OWC in-house tool</span>Developer and project manager, Python</div>
+          <h3 class="card-title">IAC layout optimiser</h3>
+          <p class="card-text">Took the tool from specification to release: a biased genetic algorithm (matrix operations, multiprocessing) that minimises IAC length under design constraints, producing a layout in 2–5 hours instead of days, with 10–30% shorter cable on past projects.</p>
+        </article>
+
+        <article class="card" data-topics="econ">
+          <div class="card-meta"><span class="status">Market study</span>Route-to-market assessment</div>
+          <h3 class="card-title">2 GW floating offshore wind, the Philippines</h3>
+          <p class="card-text">Assessed the supply–demand balance and transmission curtailment risk to test whether the project could feasibly connect to the grid, then turned the findings into an investment-risk table and alternative route-to-market options.</p>
+        </article>
+
+        <article class="card" data-topics="leadership studies econ">
+          <div class="card-meta"><span class="status">Technical due diligence</span>Lead electrical reviewer</div>
+          <h3 class="card-title">About 50 MW onshore wind farm, Vietnam</h3>
+          <p class="card-text">Reviewed the grid-connection design and identified network overloads under normal and N-1 contingency conditions, with recommendations ahead of the investment decision.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- Research ----------
+         Author lists use the Vietnamese style (given name + initials); Long HH in bold. -->
+    <section id="panel-research" data-panel="research">
+      <h2>Research</h2>
+
+      <div class="group">
+        <div class="group-label">Book chapter</div>
+
+        <div class="paper">
+          <div class="paper-title">From Offshore Wind Pipeline to Bankable Power: Managing Grid, Curtailment and Offtake Risk in ASEAN</div>
+          <div class="paper-authors"><strong>Long HH</strong>, Huong HL, Giang NH, and Tuyen ND</div>
+          <div class="paper-meta"><span class="status">Accepted, in preparation</span>Book chapter, ASEAN Centre for Energy, 2026</div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label">Journal articles</div>
+
+        <div class="paper">
+          <div class="paper-title"><a href="https://doi.org/10.1016/j.ijhydene.2023.03.257" target="_blank" rel="noopener">A Comprehensive Review of Direct Coupled Photovoltaic–Electrolyser System: Sizing Techniques, Operating Strategies, Research Progress, Current Challenges, and Future Recommendations</a></div>
+          <div class="paper-authors">Long PV, <strong>Long HH</strong>, and Tuyen ND</div>
+          <div class="paper-meta"><em>International Journal of Hydrogen Energy</em> (Q1), 48, 25231–25249, 2023</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title"><a href="https://doi.org/10.1016/j.egyr.2022.10.385" target="_blank" rel="noopener">An Improved State Machine-Based Energy Management Strategy for Renewable Energy Microgrid with Hydrogen Storage System</a></div>
+          <div class="paper-authors">Long PV, <strong>Long HH</strong>, Kien DC, Hirotaka T, and Tuyen ND</div>
+          <div class="paper-meta"><em>Energy Reports</em> (Q1), 9 (Suppl. 1), 194–201, 2023</div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label">Conference papers</div>
+
+        <div class="paper">
+          <div class="paper-title">Power to Hydrogen Life Cycle Assessment: Method and a Case Study for the United States</div>
+          <div class="paper-authors"><strong>Long HH</strong>, Long PV, and Nguyen D</div>
+          <div class="paper-meta">WindEurope Annual Event, Copenhagen, 2025</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">A Small Scale Microgrid Experimental Model Integrated Battery–Hydrogen Storage System</div>
+          <div class="paper-authors"><strong>Long HH</strong>, Anh NH, Hirotaka T, Goro F, and Tuyen ND</div>
+          <div class="paper-meta">IEEJ Conference, Japan, 2024</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Grid Forming-Based Hydrogen System for High-Penetration Renewable Energy Microgrid</div>
+          <div class="paper-authors">Kien DC, Anh NH, <strong>Long HH</strong>, Long PV, Hirotaka T, and Tuyen ND</div>
+          <div class="paper-meta">International Conference on Power and Energy Systems Engineering (CPESE), Japan, 2024</div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label">Hydrogen policy and market briefs · 100% Renewable Energy Laboratory</div>
+
+        <div class="paper">
+          <div class="paper-title">Lessons from Hydrogen Strategy in Vietnam and the United States</div>
+          <div class="paper-meta">Policy and market brief, 100% Renewable Energy Laboratory, HUST</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Policies and Incentives for Green Hydrogen</div>
+          <div class="paper-meta">Policy and market brief, 100% Renewable Energy Laboratory, HUST</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Green Hydrogen Market: Potentials and Challenges</div>
+          <div class="paper-meta">Policy and market brief, 100% Renewable Energy Laboratory, HUST</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Current Popular Electrolysis Technologies, Technology Development Trends, and Future Electrolyzer Market</div>
+          <div class="paper-meta">Policy and market brief, 100% Renewable Energy Laboratory, HUST</div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Hydrogen Energy: Overview of Production and Applications</div>
+          <div class="paper-meta">Policy and market brief, 100% Renewable Energy Laboratory, HUST</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CV ---------- -->
+    <section id="panel-cv" data-panel="cv">
+      <h2>Curriculum vitae</h2>
+      <p class="note">
+        Last updated: November 2026 —
+        <a href="assets/CV_Long_Hoang.pdf" target="_blank" rel="noopener">open the PDF in a new tab</a>.
+      </p>
+
+      <iframe class="pdf-frame" src="assets/CV_Long_Hoang.pdf" title="Curriculum vitae of Long Hoang" loading="lazy"></iframe>
+
+      <p style="margin-top:20px;">
+        <a class="button" href="assets/CV_Long_Hoang.pdf" download>Download PDF</a>
+      </p>
+    </section>
+
   </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>&copy; <span id="year">2026</span> Long Hoang</div>
+    <div class="footer-hint">Press <kbd>/</kbd> to search · <kbd>←</kbd> <kbd>→</kbd> to switch sections</div>
+    <div>London, UK</div>
+  </div>
+</footer>
+
+<!-- ================= SEARCH PALETTE ================= -->
+<dialog class="palette" id="palette" aria-label="Search the site">
+  <div class="palette-input">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input type="text" placeholder="Search projects, roles, papers…" autocomplete="off" spellcheck="false"
+           role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" aria-label="Search">
+  </div>
+  <ul class="palette-list" id="palette-list" role="listbox" aria-label="Results"></ul>
+  <div class="palette-foot" aria-hidden="true">
+    <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+    <span><kbd>↵</kbd> open</span>
+    <span><kbd>esc</kbd> close</span>
+    <span><kbd>1</kbd>–<kbd>5</kbd> jump to a section</span>
+  </div>
+</dialog>
+
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="site.js"></script>
+
 </body>
 </html>
