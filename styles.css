@@ -816,3 +816,59 @@ kbd {
   a { color: inherit; border: none; }
   section { padding-bottom: 24px; page-break-inside: avoid; }
 }
+
+
+/* ---------- beyond work: travel map and photos ---------- */
+
+.map-wrap {
+  margin-top: 12px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--panel);
+  overflow: hidden;
+}
+.travel-map { display: block; width: 100%; height: auto; }
+.map-land path { fill: var(--paper); stroke: var(--rule); stroke-width: .6; }
+.map-visited path { fill: var(--accent-bg); stroke: var(--accent); stroke-width: .8; }
+/* beer markers: amber glass, white foam, dot on the exact spot */
+.map-pin .spot { fill: var(--accent); stroke: var(--paper); stroke-width: .8; }
+.map-pin .glass { fill: #f4b400; stroke: #6b4300; stroke-width: 1; }
+.map-pin .handle { fill: none; stroke: #6b4300; stroke-width: 1.6; }
+.map-pin .bubbles { stroke: #fff3c4; stroke-width: .8; stroke-linecap: round; opacity: .9; }
+.map-pin .foam { fill: #fffdf5; stroke: #6b4300; stroke-width: .9; stroke-linejoin: round; }
+.map-pin .beer { transition: transform .15s ease; transform-box: fill-box; }
+.map-pin text {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 600;
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--panel);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+.map-pin { cursor: default; }
+.map-pin:hover .glass { fill: #ffc929; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+.photo { margin: 0; }
+.photo.wide { grid-column: span 2; }
+.photo img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--panel);
+}
+.photo figcaption { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+@media (max-width: 620px) {
+  .gallery { grid-template-columns: 1fr; }
+  .photo.wide { grid-column: auto; }
+  .photo img { height: 220px; }
+}
