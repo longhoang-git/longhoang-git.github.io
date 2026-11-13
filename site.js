@@ -203,7 +203,7 @@
       var item = make('span', 'kind ' + k, k.charAt(0).toUpperCase() + k.slice(1));
       legend.appendChild(item);
     });
-    legend.appendChild(make('span', 'span-total', first + ' — present'));
+    legend.appendChild(make('span', 'span-total', first + '–present'));
     chart.appendChild(legend);
   })();
 
