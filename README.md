@@ -69,9 +69,9 @@ Projects panel:
 ```
 
 `data-topics` is space-separated; each word matches a filter chip's
-`data-topic`. Sector chips: `selected` (on the CV), `offshore`, `onshore`,
-`solar`, `interconnector`, `hydrogen`. Work chips: `leadership`, `cables`,
-`studies`, `econ`, `markets`, `policy`, `software`. To add
+`data-topic`: `offshore`, `onshore`, `solar`, `interconnector`, `hydrogen`,
+`markets` (energy markets and policy), `software`. Other words in
+`data-topics` are kept for keyword search but have no chip. To add
 a topic, add a chip:
 `<button class="chip" type="button" data-topic="hvdc" aria-pressed="false">HVDC</button>`.
 Counts on the chips are filled in automatically.
